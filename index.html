@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Happy Birthday, Riddhi ✨</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stage">
+    <!-- star/heart canvas -->
+    <canvas id="bg-canvas" class="canvas-bg"></canvas>
+    <!-- fireworks canvas -->
+    <canvas id="fx-canvas" class="canvas-fx"></canvas>
+
+    <header class="hdr">
+      <div class="brand">
+        <div class="logo">R</div>
+        <div>
+          <h1>Happy Birthday, Riddhi</h1>
+          <p class="sub">A little surprise — click the gift to begin</p>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="muteBtn" class="btn small">🔈 Mute</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="center-stage">
+        <!-- Gift box area -->
+        <div id="giftWrap" class="gift-wrap" aria-label="Gift box. Click to open.">
+          <img id="giftImg" src="assets/gift-closed.png" alt="Gift box" onerror="this.style.display='none'">
+          <div id="giftCSS" class="gift-css">
+            <div class="box-top"></div>
+            <div class="box-body"></div>
+            <div class="ribbon"></div>
+          </div>
+          <div id="clickHint" class="click-hint">Click to open</div>
+        </div>
+
+        <!-- Typing message -->
+        <div id="messageCard" class="message-card hidden" aria-live="polite">
+          <div id="typedText" class="typed"></div>
+        </div>
+
+        <!-- Slideshow -->
+        <div id="slideshow" class="slideshow hidden">
+          <div class="slide-view">
+            <img id="mainPic" src="assets/pic1.jpg" alt="memory">
+          </div>
+          <div class="thumbs">
+            <img class="thumb active" data-src="assets/pic1.jpg" src="assets/pic1.jpg" alt="">
+            <img class="thumb" data-src="assets/pic2.jpg" src="assets/pic2.jpg" alt="">
+            <img class="thumb" data-src="assets/pic3.jpg" src="assets/pic3.jpg" alt="">
+            <img class="thumb" data-src="assets/pic4.jpg" src="assets/pic4.jpg" alt="">
+            <img class="thumb" data-src="assets/pic5.jpg" src="assets/pic5.jpg" alt="">
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="ftr">
+      <small>Made with care ✨</small>
+    </footer>
+
+  </div>
+
+  <audio id="bgAudio" loop preload="auto">
+    <source src="assets/music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
